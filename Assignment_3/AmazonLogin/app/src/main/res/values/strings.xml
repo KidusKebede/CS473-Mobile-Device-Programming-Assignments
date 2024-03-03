@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Amazon Login</string>
+    <string name="sign_in_message">Sign in to <b>Zappos.com</b> using your Amazon account</string>
+</resources>

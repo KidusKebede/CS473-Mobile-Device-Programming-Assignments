@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextResource"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Water resource name" />
+
+    <EditText
+        android:id="@+id/editTextLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:hint="Location" />
+    <EditText
+        android:id="@+id/editTextType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:hint="Type" />
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="120dp"
+    android:layout_height="36dp"
+        android:layout_gravity="center_horizontal"
+    android:background="@drawable/circular_button_background"
+    android:text="Add" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="14dp"
+
+        android:background="?android:attr/listDivider"
+        android:visibility="invisible" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!-- Header Row -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="11dp"
+            android:background="@color/purple_200">
+        </TableRow>
+    </TableLayout>
+
+
+</LinearLayout>

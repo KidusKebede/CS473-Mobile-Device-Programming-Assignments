@@ -1,0 +1,242 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#E2DFDF"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="4dp"
+        android:background="?attr/colorPrimary">
+        <ImageView
+            android:id="@+id/amazon_Logo"
+            android:layout_width="132dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/shopping" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/layo"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/toolbar"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_in_message"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/loginTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:text="Sign in"
+                android:textStyle="bold"
+                android:textSize="28sp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="8dp"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/forgotPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forgot password?"
+                android:autoLink="all"
+                android:clickable="true"
+                android:textColor="@android:color/holo_blue_dark"
+                android:padding="12dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/form_field"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layo"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="vertical"
+        android:background="@drawable/edit_text"
+        tools:ignore="NotSibling">
+
+        <!-- EditTexts, Button -->
+
+        <EditText
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email(phone for mobile accounts)"
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            android:background="@android:color/transparent"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Amazon Password"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:background="@android:color/transparent"
+           />
+
+
+
+    </LinearLayout>
+    <CheckBox
+        android:layout_below="@id/form_field"
+
+
+        android:id="@+id/showPasswordCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Password"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="24dp"
+
+        />
+
+
+    <LinearLayout
+        android:layout_below="@id/showPasswordCheckbox"
+
+        android:id="@+id/keepMeSignedIn"
+        android:layout_marginLeft="24dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Keep me signed in. " />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Details"
+            android:textColor="#2196F3" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/keepMeSignedIn"
+
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="#D4973D"
+        android:text="Sign in"
+
+
+        android:textColor="@color/black" />
+
+    <LinearLayout
+        android:layout_below="@id/loginButton"
+        android:id="@+id/dontHave"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <View
+            android:layout_width="97dp"
+            android:layout_height="1dp"
+            android:layout_marginEnd="1dp"
+            android:background="#575757" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New to Amazon?"
+            android:gravity="center"
+            android:textColor="#575757" />
+
+        <View
+            android:layout_width="120dp"
+
+            android:layout_height="1dp"
+            android:background="#575757"
+            android:layout_marginStart="1dp" />
+    </LinearLayout>
+    <Button
+        android:layout_below="@id/dontHave"
+        android:layout_margin="25dp"
+        android:id="@+id/registerButton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Create a new Amazon account"
+        android:textColor="@color/black"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_border"
+        android:gravity="center"
+        tools:ignore="HardcodedText" />
+
+
+    <LinearLayout
+        android:layout_below="@id/registerButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/termsPolicy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Conditions of Use Privacy Notice"
+            android:textColor="#2196F3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="©️ 1996-2024, Amazon.com, Inc or its affiliates"
+            android:textColor="#575757" />
+
+    </LinearLayout>
+
+</RelativeLayout>
