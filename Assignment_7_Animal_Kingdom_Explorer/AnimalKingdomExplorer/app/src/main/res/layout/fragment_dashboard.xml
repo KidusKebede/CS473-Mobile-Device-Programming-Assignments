@@ -1,0 +1,23 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Buttons go here -->
+        <Button
+            android:id="@+id/btn_animal_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Animal Details" />
+
+        <Button
+            android:id="@+id/btn_species_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Species Details" />
+
+    </LinearLayout>
+
+</layout>
